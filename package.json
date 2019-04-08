@@ -1,0 +1,15 @@
+{
+  "name": "who_at_home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HuYanan",
+  "license": "ISC",
+  "dependencies": {
+    "node-nmap": "^4.0.0",
+    "say": "^0.15.0"
+  }
+}
