@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "node-nmap": "^4.0.0",
+    "request": "^2.88.0",
     "say": "^0.15.0"
   }
 }
