@@ -4,6 +4,8 @@ const say = require('say')
 let fs = require('fs')
 cfg = require('../config.json')
 console.log(cfg.nmapJsonPath)
+// 上次扫描的结果
+let lastScanRes = ''
 
 // Use default system voice and speed
 // say.speak('启动谁在家系统!请等待大约5秒！')
@@ -14,9 +16,16 @@ let scanCount = 0
 function newScan() {
   scanCount++
   console.log(scanCount)
-  var osandports = new nmap.QuickScan('192.168.49.0-130');
+  var osandports = new nmap.QuickScan(cfg.ip);
 
   osandports.on('complete',function(data){
+    const dataStr = JSON.stringify(data)
+    if (lastScanRes === dataStr) {
+      console.log('扫描结果不变')
+      return
+    }
+    lastScanRes = dataStr
+
     // console.log(data);
     // data.forEach((item)=>{
       // if (item.ip === '192.168.49.254') {

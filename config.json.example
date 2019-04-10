@@ -1,0 +1,5 @@
+{
+  "nmapJsonPath": "/Users/huyanan/nmap.json",
+  "remoteJsonPath": "http://huyanan.site/cdn/who_at_home/nmap.json",
+  "ip": "192.168.49.0-130"
+}
