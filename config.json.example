@@ -1,5 +1,10 @@
 {
   "nmapJsonPath": "/Users/huyanan/nmap.json",
   "remoteJsonPath": "http://huyanan.site/cdn/who_at_home/nmap.json",
-  "ip": "192.168.49.0-130"
+  "ip": "192.168.49.0-130",
+  "users": {
+    "192.168.1.101": "yang",
+    "192.168.1.102": "yang",
+    "192.168.1.103": "hu"
+  }
 }

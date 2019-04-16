@@ -3,7 +3,6 @@ nmap.nmapLocation = 'nmap'; //default
 const say = require('say')
 let fs = require('fs')
 cfg = require('../config.json')
-console.log(cfg.nmapJsonPath)
 // 上次扫描的结果
 let lastScanRes = ''
 
@@ -20,6 +19,8 @@ function newScan() {
 
   osandports.on('complete',function(data){
     const dataStr = JSON.stringify(data)
+    console.log(dataStr)
+    console.log(lastScanRes)
     if (lastScanRes === dataStr) {
       console.log('扫描结果不变')
       return
